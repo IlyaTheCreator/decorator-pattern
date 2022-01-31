@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace DecoratorLibrary
 {
-    public class Class1
+    public class Decaf : Beverage
     {
+        public override double Cost()
+        {
+            return base.Cost() + 0.99;
+        }
     }
 }
