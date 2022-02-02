@@ -1,4 +1,5 @@
 ﻿using DecoratorLibrary;
+using DecoratorLibrary.Condiments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,17 +12,22 @@ namespace DecoratorPattern
     {
         public static void Main(string[] args)
         {
-            HouseBlend houseBlend = new HouseBlend { Whip = 1, Milk = 1 };
-            DarkRoast darkRoast = new DarkRoast { Mocha = 1 };
-            Decaf decaf = new Decaf { Soy = 1 };
-            Espresso espresso = new Espresso { Whip = 2 };
+            Beverage beverage = new Espresso();
+            Console.WriteLine(beverage.GetDescription() + " $" + beverage.Cost());
 
-            Console.WriteLine($"${houseBlend.Cost()}");
-            Console.WriteLine($"${darkRoast.Cost()}");
-            Console.WriteLine($"${decaf.Cost()}");
-            Console.WriteLine($"${espresso.Cost()}");
+            Beverage beverage2 = new DarkRoast();
+            beverage2 = new Mocha(beverage2);
+            beverage2 = new Mocha(beverage2);
+            beverage2 = new Whip(beverage2);
+            Console.WriteLine(beverage2.GetDescription() + " $" + beverage2.Cost());
 
-            Console.ReadLine();
+            Beverage beverage3 = new DarkRoast();
+            beverage3 = new Soy(beverage3);
+            beverage3 = new Mocha(beverage3);
+            beverage3 = new Whip(beverage3);
+            Console.WriteLine(beverage2.GetDescription() + " $" + beverage3.Cost());
+
+            Console.ReadKey();
         }
     }
 }

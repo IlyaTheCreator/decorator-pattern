@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace DecoratorLibrary
 {
-    public class HouseBlend : Beverage
+    public class DarkRoast : Beverage
     {
+        public DarkRoast()
+        {
+            Description = "Dark Roast";
+        }
+
         public override double Cost()
         {
-            return base.Cost() + 1.25;
+            return 2.25;
         }
     }
 }

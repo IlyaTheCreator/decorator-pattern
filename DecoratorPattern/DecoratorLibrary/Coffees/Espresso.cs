@@ -8,9 +8,14 @@ namespace DecoratorLibrary
 {
     public class Espresso : Beverage
     {
+        public Espresso()
+        {
+            Description = "Espresso";
+        }
+
         public override double Cost()
         {
-            return base.Cost() + 3.99;
+            return 3.99;
         }
     }
 }

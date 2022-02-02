@@ -42,10 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Beverage.cs" />
-    <Compile Include="DarkRoast.cs" />
-    <Compile Include="Decaf.cs" />
-    <Compile Include="Espresso.cs" />
-    <Compile Include="HouseBlend.cs" />
+    <Compile Include="Coffees\Decaf.cs" />
+    <Compile Include="Coffees\Espresso.cs" />
+    <Compile Include="Coffees\HouseBlend.cs" />
+    <Compile Include="CondimentDecorator.cs" />
+    <Compile Include="Condiments\Mocha.cs" />
+    <Compile Include="Condiments\Soy.cs" />
+    <Compile Include="Condiments\Whip.cs" />
+    <Compile Include="Condiments\Milk.cs" />
+    <Compile Include="Coffees\DarkRoast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
